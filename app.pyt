@@ -4,9 +4,23 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    arr = ["Luis", "Paco", "Rosita", "Martin", "Elsa"]
-    autor = "Antonio Gregorio Canton Chacon"
-    return render_template("index.html", nombre = autor, amigos = arr)
+    return render_template("index.html")
+
+@app.route("/animalesexoticos")
+def index():
+    return render_template("animales.html")
+
+@app.route("/vehiculosantiguos")
+def index():
+    return render_template("vehiculos.html")
+
+@app.route("/lasmaravillasdelmundo")
+def index():
+    return render_template("maravillas.html")
+
+@app.route("/acercade")
+def index():
+    return render_template("acercade.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

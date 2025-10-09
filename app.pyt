@@ -7,19 +7,19 @@ def index():
     return render_template("index.html")
 
 @app.route("/animalesexoticos")
-def index():
+def animales():
     return render_template("animales.html")
 
 @app.route("/vehiculosantiguos")
-def index():
+def vehiculos():
     return render_template("vehiculos.html")
 
 @app.route("/lasmaravillasdelmundo")
-def index():
+def maravillas():
     return render_template("maravillas.html")
 
 @app.route("/acercade")
-def index():
+def acercade():
     return render_template("acercade.html")
 
 if __name__ == "__main__":

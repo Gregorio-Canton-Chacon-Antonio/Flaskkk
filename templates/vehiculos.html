@@ -1,1 +1,54 @@
-!
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehikkkulos Antiguos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <header class="bg-dark text-danger text-center py-4 mb-4">
+        <h1>Vehiculos Antiguos</h1>
+        <nav>
+            <ul class="nav justify-content-center mt-3">
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="{{ url_for('index') }}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-success" href="{{ url_for('animales') }}">Animales Exoticos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{{ url_for('vehiculos') }}">Vehiculos antiguos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('maravillas') }}">Las maravillas del mundo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="{{ url_for('acercade') }}">Acerca de...</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mb-5">
+        <img src="{{ url_for('static', filename='imgz/lebronjameslebronjames.jpg') }}" alt="Imagen del dios todopoderoso LeBron James" class="img-fluid">
+    </div>
+
+    <footer class="bg-dark text-center py-3 fixed-bottom">
+        <span class="rainbow-text">&copy; GCCA - 5D - Programación - CETis 61</span>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<style>
+.rainbow-text {
+    background: linear-gradient(90deg, blue, green, red, yellow, turquoise);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+</style>
+</html>

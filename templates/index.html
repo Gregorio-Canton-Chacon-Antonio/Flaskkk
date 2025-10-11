@@ -31,8 +31,26 @@
         </nav>
     </header>
 
-    <div class="container mb-5">
-        <img src="{{ url_for('static', filename='imgz/lebronjameslebronjames.jpg') }}" alt="Imagen del dios todopoderoso LeBron James" class="img-fluid">
+    <div class="container text-center mb-5">
+
+        <h3 class="mb-4">Holas les habla LeBron James</h3>
+            <img src="{{ url_for('static', filename='imgz/lebron1.png') }}" alt="Imagen del King James" class="img-fluid w-25">
+                <p class="mt-4">Solo para decirles que esta pagina web trata sobre diversos temas, desde maravillas del mundo, actual y tambien en referencia a animales exoticos que son siempre una maravilla de ver, como a su vez, maravillas del pasado, esto haciendo referencia a los vehiculos antiguos</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-3 mx-2">
+                <img src="{{ url_for('static', filename='imgz/exotico1.png') }}" alt="Imagen 1" class="img-fluid w-100">
+    </div> 
+            <div class="col-md-3 mx-2">
+                <img src="{{ url_for('static', filename='imgz/maravilla1.png') }}" alt="Imagen 2" class="img-fluid w-100">
+    </div>
+            <div class="col-md-3 mx-2">
+                <img src="{{ url_for('static', filename='imgz/vehiculo1.png') }}" alt="Imagen 3" class="img-fluid w-100">
+    </div>
+
+</div>
+        <p>Espero que les guste la pagina web, y que la disfruten tanto como yo disfruto jugar basquetbol</p>
+            <img src="{{ url_for('static', filename='imgz/lebron2.png') }}" alt="Segunda imagen del King" class="img-fluid w-25">
     </div>
 
     <footer class="bg-dark text-center py-3 fixed-bottom">
@@ -50,5 +68,6 @@
     color: transparent;
     font-weight: bold;
 }
+
 </style>
 </html>

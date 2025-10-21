@@ -1,4 +1,4 @@
-# FLASKKK
+# Flask
 Aprender plantillas con Flask, Formularios o Flask en General
 HTML y Python igual
 

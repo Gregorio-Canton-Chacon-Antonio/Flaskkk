@@ -1,74 +1,35 @@
-<!DOCTYPE html>
-<html lang="es-mx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de...</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <header class="bg-dark text-info text-center py-4 mb-4">
-        <h1>Acerca de... mi</h1>
-        <nav>
-            <ul class="nav justify-content-center mt-3">
-                <li class="nav-item">
-                    <a class="nav-link text-primary" href="{{ url_for('index') }}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-success" href="{{ url_for('animales') }}">Animales Exoticos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-danger" href="{{ url_for('vehiculos') }}">Vehiculos antiguos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="{{ url_for('maravillas') }}">Las maravillas del mundo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="{{ url_for('acercade') }}">Acerca de...</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}Acerca de...{% endblock %}
 
-    <h3 class="mb-4 text-center">Quien soy yo?</h3>
-    <div class="row justify-content-center"></div>
-            <img src="{{ url_for('static', filename='imgz/yo1.jpg') }}" alt="Imagen Mia" class="img-fluid w-25">
+{% block content %}
+<div class="container text-center mb-5">
+    <h3 class="mb-4">Quien soy yo?</h3>
+    
+    <div class="my-4">
+        <img src="{{ url_for('static', filename='imgz/yo1.jpg') }}" alt="Imagen Mia" class="img-fluid w-25">
+    </div>
+    
+    <p class="my-4 px-3">Tengo 17 años de edad, naci el 25 de Enero del 2008, mido 1.74 centimetros, lamentablemente no soy tan alto como LeBron James y...</p>
+    
+    <p class="my-4 px-3">Me gusta ir al tianguis, a buscar los mejores precios en la mejor ropa, por eso odio a los revendedores. Me gusta escuchar musica y se que suena bien poser pero, de verdad la musica es parte de mi, siempre voy a identificarme con ella. Me gusta toda la comida menos la que no he probado y jamas lo hare porque no lo necesito raaaaa. Tambien me gustan los videojuegos, en especial Doki Doki Literature Club, Fallout 4 y muchos mas juegos que definitivamente me marcaron...</p>
+    
+    <div class="row justify-content-center my-5">
+        <div class="col-md-3 mx-2 mb-3">
+            <img src="{{ url_for('static', filename='imgz/yo2.png') }}" alt="Imagen 1" class="img-fluid w-100">
+        </div> 
+        <div class="col-md-3 mx-2 mb-3">
+            <img src="{{ url_for('static', filename='imgz/yo3.png') }}" alt="Imagen 2" class="img-fluid w-100">
+        </div>
+        <div class="col-md-3 mx-2 mb-3">
+            <img src="{{ url_for('static', filename='imgz/yo4.png') }}" alt="Imagen 3" class="img-fluid w-100">
+        </div>
+    </div>
+    
+    <p class="my-4 px-3">Sobre que quiero ser en el futuro, no lo se... odio esa pregunta porque me hace saber un poco lo mucho que tal vez, solo pienso en cosas que no me convienen. SUpongo que, quiero generar todo el dinero que pueda porque aunque no hace falta en mi familia, parece que a mi me falta con tantas cosas que quiero y no puedo. Tambien, en un futuro quiero ser mas maduro, mas prudente, y poder siempre decir de verdad lo que siento o pienso a quienes mas quiero... Ah y lo mas importante, Quiero cambiar, en todo....</p>
+    
+    <div class="my-4">
+        <img src="{{ url_for('static', filename='imgz/yo5.jpg') }}" alt="Yo de nuevo" class="img-fluid w-25">
+    </div>
 </div>
-            <p class="mt-4">Tengo 17 años de edad, naci el 25 de Enero del 2008, mido 1.74 centimetros, lamentablemente no soy tan alto como LeBron James y...</p>
-        
-        <p>Me gusta ir al tianguis, a buscar los mejores precios en la mejor ropa, por eso odio a los revendedores. Me gusta escuchar musica y se que suena bien poser pero, de verdad la musica es parte de mi, siempre voy a identificarme con ella. Me gusta toda la comida menos la que no he probado y jamas lo hare porque no lo necesito raaaaa. Tambien me gustan los videojuegos, en especial Doki Doki Literature Club, Fallout 4 y muchos mas juegos que definitivamente me marcaron...</p>
-    </div>
-
-    <div class="row justify-content-center">
-            <div class="col-md-3 mx-2">
-                <img src="{{ url_for('static', filename='imgz/yo2.png') }}" alt="Imagen 1" class="img-fluid w-100">
-    </div> 
-            <div class="col-md-3 mx-2">
-                <img src="{{ url_for('static', filename='imgz/yo3.png') }}" alt="Imagen 2" class="img-fluid w-100">
-    </div>
-            <div class="col-md-3 mx-2">
-                <img src="{{ url_for('static', filename='imgz/yo4.png') }}" alt="Imagen 3" class="img-fluid w-100">
-    </div>
-
-    <p class="mt-4">Sobre que quiero ser en el futuro, no lo se... odio esa pregunta porque me hace saber un poco lo mucho que tal vez, solo pienso en cosas que no me convienen. SUpongo que, quiero generar todo el dinero que pueda porque aunque no hace falta en mi familia, parece que a mi me falta con tantas cosas que quiero y no puedo. Tambien, en un futuro quiero ser mas maduro, mas prudente, y poder siempre decir de verdad lo que siento o pienso a quienes mas quiero... Ah y lo mas importante, Quiero cambiar, en todo....</p>
-    <img src="{{ url_for('static', filename='imgz/yo5.jpg') }}" alt="Yo de nuevo" class="img-fluid w-25">
-
-    <footer class="bg-dark text-center py-3 fixed-bottom">
-        <span class="rainbow-text">&copy; GCCA - 5D - Programación - CETis 61</span>
-    </footer>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<style>
-.rainbow-text {
-    background: linear-gradient(90deg, blue, green, red, yellow, turquoise);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-}
-
-</style>
-</html>
+{% endblock %}

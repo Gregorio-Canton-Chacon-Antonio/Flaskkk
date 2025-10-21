@@ -1,84 +1,52 @@
-<!DOCTYPE html>
-<html lang="es-mx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maravillas del Mundo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <header class="bg-dark text-warning text-center py-4 mb-4">
-        <h1>Las Maravillas del Mundo</h1>
-        <nav>
-            <ul class="nav justify-content-center mt-3">
-                <li class="nav-item">
-                    <a class="nav-link text-primary" href="{{ url_for('index') }}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-success" href="{{ url_for('animales') }}">Animales Exoticos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-danger" href="{{ url_for('vehiculos') }}">Vehiculos antiguos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="{{ url_for('maravillas') }}">Las maravillas del mundo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="{{ url_for('acercade') }}">Acerca de...</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}Maravillas del Mundo{% endblock %}
 
+{% block content %}
 <div class="container text-center mb-5">
-        <p>Las siete maravillas seleccionadas incluían la Gran Pirámide de Guiza (la más antigua de todas y la única que todavía se puede visitar), los Jardines Colgantes de Babilonia, el Templo de Artemisa en Éfeso, la Estatua de Zeus en Olimpia, el Mausoleo de Halicarnaso, el Coloso de Rodas y el Faro de Alejandría.
-        Aunque hay ciertas dudas sobre la existencia real de algunos de los lugares mencionados por Antípatro de Sidón, no hay dudas sobre las nuevas siete maravillas del mundo moderno. Estas son destinos que se pueden visitar y experimentar en persona. En el año 2001, tras más de 90 millones de votos emitidos comunidad global, todo estaba preparado para revelar la lista de las siete maravillas modernas impresionantes. Solo un puñado selecto de candidaturas se ganaron la codiciada atención:</h5>
-                
-                <h2>Machu Picchu (Perú)</h4>
-                    <p>Tras su visita a Machu Picchu en octubre de 1943, Pablo Neruda vio en la ciudad abandonada entre la espesa y húmeda selva un símbolo de la opresión de los pueblos indígenas: "Entonces en la escala de la tierra he subido/entre la atroz maraña de las selvas perdidas/hasta ti, Machu Picchu", escribió en Alturas de Machu Picchu. Aún se le puede escuchar recitar sus emocionantes versos gracias a un audio grabado en Santiago de Chile el 10 de marzo de 1947. Lo cierto es que desde que el explorador Hiram Bingham volvió a colocarla en el mapa en 1911, la ciudadela no ha dejado de fascinar a todo aquel que, dejando atrás Aguas Calientes, ha ascendido hasta la cumbre donde los incas lograron convertir una agresiva orografía en una ciudadela inmortal.</p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla2.png') }}" alt="Machu Picchu" class="img-fluid w-25">
-                
-                <h2>Petra (Jordania)</h2>
-                    <p>Petra pasó a formar parte de la lista de las nuevas siete maravillas del mundo por votación popular. Y eso que el 80% todavía está oculto; pero lo cierto es que Petra, o Raqmu, como la llamaban sus segundos pobladores, los nabateos, es un enclave fascinante. Se haya tenido la oportunidad de visitar o ya solo sea por haber visto Indiana Jones y la última cruzada, todo el mundo sabe que tras superar el estrecho desfiladero lo que aparece al fondo es el Al-Khazneh, el Tesoro del Faraón.</p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla3.png') }}" alt="Petra" class="img-fluid w-25">
-                
-                <h2>La Gran Muralla (China)</h2>
-                    <p>Con más de 2.000 años de historia, la Gran Muralla China ha estado ligada a las dinastías más importantes de China, como la Dinastía Qin y la Ming. Más de 21.000 kilómetros entre paisajes fabulosos que cruzan selvas y desiertos y el mito de que es una de las únicas construcciones humanas que se pueden ver desde el cielo llevaron a que fuera escogida como una de las nuevas maravillas del mundo moderno.</p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla4.png') }}" alt="La Gran Muralla China" class="img-fluid w-25">
-                
-                <h2>El Coliseo (Italia)</h2>
-                    <p>La inauguración con el sacrificio de más de 5.000 fieras del Coliseo en el año 80 supuso uno de los mayores acontecimientos sociales del Imperio Romano. Desde entonces, el anfiteatro empezado por el emperador Vespasiano en el 72 d. C. no ha dejado generar fascinación. Este monumento concentra como pocos historia y arquitectura. En él estaba todo perfectamente estudiado para acoger a los hasta 50.000 espectadores ordenados por su rango social que se concentraban para ver peleas de gladiadores, ejecuciones, recreaciones de batallas o caza de animales.</p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla5.png') }}" alt="El Coliseo" class="img-fluid w-25">
-                
-                <h2>Chichen Itza (Mexico)</h2>
-                    <p>El yacimiento arqueológico de Chichén Itzá se abre en medio de la inmensa selva de la península de Yucatán y cubre un área de 6.5 km2. Basta ver, nada más acceder, al recinto la espectacular pirámide de Kukulcán para comprender que este fuera uno de los lugares elegidos para incorporarse en la lista de las nuevas siete maravillas del mundo. La geometría de la pirámide guarda el secreto del dominio que tenían sobre la astronomía los mayas.</p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla6.png') }}" alt="Chichen Itza" class="img-fluid w-25">
-                
-                <h2>Cristo de Corcovado (Brasil)</h2>
-                    <p>A Río de Janeiro no le faltan iconos; pero solo uno de ellos está considerado como una de las nuevas siete maravillas del mundo: el Cristo de Corcovado, la escultura art decó más grande del mundo. Hasta la cima donde se sitúa se puede llegar en coche, pero es mejor hacerlo en el Tren de Corcovado que atraviesa el frondoso Parque Nacional Tijuca. </p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla7.png') }}" alt="Cristo de Corcovado" class="img-fluid w-25">
-                
-                <h2>Taj Mahal</h2>
-                    <p>El emperador Sha Jahan ordenó levantarlo con el deseo de plasmar materialmente su reinado, tal como había hecho antes con los jardines Shalimar de Lahore, el Fuerte Rojo o la Jama Masjid de Delhi. Todo ello formaba parte de su legado; pero con el paso del tiempo ha trascendido la versión más poética de la construcción del famoso mausoleo de Agra, la de que el emperador ordenó construirlo en memoria de su cuarta esposa, la favorita. Sea como sea, la belleza simétrica y blanca del Taj Mahal es de esas que despiertan intensas sensaciones. "Una lágrima en la mejilla del tiempo", como dijo el poeta Rabindranath Tagore.</p>
-                        <img src="{{ url_for('static', filename='imgz/maravilla8.png') }}" alt="Taj Mahal" class="img-fluid w-25">
+    <p class="my-4 px-3">Las siete maravillas seleccionadas incluían la Gran Pirámide de Guiza (la más antigua de todas y la única que todavía se puede visitar), los Jardines Colgantes de Babilonia, el Templo de Artemisa en Éfeso, la Estatua de Zeus en Olimpia, el Mausoleo de Halicarnaso, el Coloso de Rodas y el Faro de Alejandría.
+    Aunque hay ciertas dudas sobre la existencia real de algunos de los lugares mencionados por Antípatro de Sidón, no hay dudas sobre las nuevas siete maravillas del mundo moderno. Estas son destinos que se pueden visitar y experimentar en persona. En el año 2001, tras más de 90 millones de votos emitidos comunidad global, todo estaba preparado para revelar la lista de las siete maravillas modernas impresionantes. Solo un puñado selecto de candidaturas se ganaron la codiciada atención:</p>
+            
+    <div class="my-5">
+        <h2 class="mb-3">Machu Picchu (Perú)</h2>
+        <p class="mb-4 px-3">Tras su visita a Machu Picchu en octubre de 1943, Pablo Neruda vio en la ciudad abandonada entre la espesa y húmeda selva un símbolo de la opresión de los pueblos indígenas: "Entonces en la escala de la tierra he subido/entre la atroz maraña de las selvas perdidas/hasta ti, Machu Picchu", escribió en Alturas de Machu Picchu. Aún se le puede escuchar recitar sus emocionantes versos gracias a un audio grabado en Santiago de Chile el 10 de marzo de 1947. Lo cierto es que desde que el explorador Hiram Bingham volvió a colocarla en el mapa en 1911, la ciudadela no ha dejado de fascinar a todo aquel que, dejando atrás Aguas Calientes, ha ascendido hasta la cumbre donde los incas lograron convertir una agresiva orografía en una ciudadela inmortal.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla2.png') }}" alt="Machu Picchu" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Petra (Jordania)</h2>
+        <p class="mb-4 px-3">Petra pasó a formar parte de la lista de las nuevas siete maravillas del mundo por votación popular. Y eso que el 80% todavía está oculto; pero lo cierto es que Petra, o Raqmu, como la llamaban sus segundos pobladores, los nabateos, es un enclave fascinante. Se haya tenido la oportunidad de visitar o ya solo sea por haber visto Indiana Jones y la última cruzada, todo el mundo sabe que tras superar el estrecho desfiladero lo que aparece al fondo es el Al-Khazneh, el Tesoro del Faraón.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla3.png') }}" alt="Petra" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">La Gran Muralla (China)</h2>
+        <p class="mb-4 px-3">Con más de 2.000 años de historia, la Gran Muralla China ha estado ligada a las dinastías más importantes de China, como la Dinastía Qin y la Ming. Más de 21.000 kilómetros entre paisajes fabulosos que cruzan selvas y desiertos y el mito de que es una de las únicas construcciones humanas que se pueden ver desde el cielo llevaron a que fuera escogida como una de las nuevas maravillas del mundo moderno.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla4.png') }}" alt="La Gran Muralla China" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">El Coliseo (Italia)</h2>
+        <p class="mb-4 px-3">La inauguración con el sacrificio de más de 5.000 fieras del Coliseo en el año 80 supuso uno de los mayores acontecimientos sociales del Imperio Romano. Desde entonces, el anfiteatro empezado por el emperador Vespasiano en el 72 d. C. no ha dejado generar fascinación. Este monumento concentra como pocos historia y arquitectura. En él estaba todo perfectamente estudiado para acoger a los hasta 50.000 espectadores ordenados por su rango social que se concentraban para ver peleas de gladiadores, ejecuciones, recreaciones de batallas o caza de animales.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla5.png') }}" alt="El Coliseo" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Chichen Itza (Mexico)</h2>
+        <p class="mb-4 px-3">El yacimiento arqueológico de Chichén Itzá se abre en medio de la inmensa selva de la península de Yucatán y cubre un área de 6.5 km2. Basta ver, nada más acceder, al recinto la espectacular pirámide de Kukulcán para comprender que este fuera uno de los lugares elegidos para incorporarse en la lista de las nuevas siete maravillas del mundo. La geometría de la pirámide guarda el secreto del dominio que tenían sobre la astronomía los mayas.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla6.png') }}" alt="Chichen Itza" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Cristo de Corcovado (Brasil)</h2>
+        <p class="mb-4 px-3">A Río de Janeiro no le faltan iconos; pero solo uno de ellos está considerado como una de las nuevas siete maravillas del mundo: el Cristo de Corcovado, la escultura art decó más grande del mundo. Hasta la cima donde se sitúa se puede llegar en coche, pero es mejor hacerlo en el Tren de Corcovado que atraviesa el frondoso Parque Nacional Tijuca.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla7.png') }}" alt="Cristo de Corcovado" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Taj Mahal</h2>
+        <p class="mb-4 px-3">El emperador Sha Jahan ordenó levantarlo con el deseo de plasmar materialmente su reinado, tal como había hecho antes con los jardines Shalimar de Lahore, el Fuerte Rojo o la Jama Masjid de Delhi. Todo ello formaba parte de su legado; pero con el paso del tiempo ha trascendido la versión más poética de la construcción del famoso mausoleo de Agra, la de que el emperador ordenó construirlo en memoria de su cuarta esposa, la favorita. Sea como sea, la belleza simétrica y blanca del Taj Mahal es de esas que despiertan intensas sensaciones. "Una lágrima en la mejilla del tiempo", como dijo el poeta Rabindranath Tagore.</p>
+        <img src="{{ url_for('static', filename='imgz/maravilla8.png') }}" alt="Taj Mahal" class="img-fluid w-25">
+    </div>
 </div>
-
-    <footer class="bg-dark text-center py-3 fixed-bottom">
-        <span class="rainbow-text">&copy; GCCA - 5D - Programación - CETis 61</span>
-    </footer>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<style>
-.rainbow-text {
-    background: linear-gradient(90deg, blue, green, red, yellow, turquoise);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-}
-
-</style>
-</html>
+{% endblock %}

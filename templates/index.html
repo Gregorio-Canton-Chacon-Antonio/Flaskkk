@@ -1,73 +1,33 @@
-<!DOCTYPE html>
-<html lang="es-mx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla Base</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <header class="bg-dark text-primary text-center py-4 mb-4">
-        <h1>Desarrollo de Plantilla Base</h1>
-        <nav>
-            <ul class="nav justify-content-center mt-3">
-                <li class="nav-item">
-                    <a class="nav-link text-primary" href="{{ url_for('index') }}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-success" href="{{ url_for('animales') }}">Animales Exoticos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-danger" href="{{ url_for('vehiculos') }}">Vehiculos antiguos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="{{ url_for('maravillas') }}">Las maravillas del mundo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="{{ url_for('acercade') }}">Acerca de...</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}Plantilla Base{% endblock %}
 
-    <div class="container text-center mb-5">
-
-        <h3 class="mb-4">Holas les habla LeBron James</h3>
-            <img src="{{ url_for('static', filename='imgz/lebron1.png') }}" alt="Imagen del King James" class="img-fluid w-25">
-                <p class="mt-4">Solo para decirles que esta pagina web trata sobre diversos temas, desde maravillas del mundo, actual y tambien en referencia a animales exoticos que son siempre una maravilla de ver, como a su vez, maravillas del pasado, esto haciendo referencia a los vehiculos antiguos</p>
-        
-        <div class="row justify-content-center">
-            <div class="col-md-3 mx-2">
-                <img src="{{ url_for('static', filename='imgz/exotico1.png') }}" alt="Imagen 1" class="img-fluid w-100">
-    </div> 
-            <div class="col-md-3 mx-2">
-                <img src="{{ url_for('static', filename='imgz/maravilla1.png') }}" alt="Imagen 2" class="img-fluid w-100">
+{% block content %}
+<div class="container text-center mb-5">
+    <h3 class="mb-4">Holas les habla LeBron James</h3>
+    
+    <div class="my-4">
+        <img src="{{ url_for('static', filename='imgz/lebron1.png') }}" alt="Imagen del King James" class="img-fluid w-25">
     </div>
-            <div class="col-md-3 mx-2">
-                <img src="{{ url_for('static', filename='imgz/vehiculo1.png') }}" alt="Imagen 3" class="img-fluid w-100">
+    
+    <p class="my-4 px-3">Solo para decirles que esta pagina web trata sobre diversos temas, desde maravillas del mundo, actual y tambien en referencia a animales exoticos que son siempre una maravilla de ver, como a su vez, maravillas del pasado, esto haciendo referencia a los vehiculos antiguos</p>
+    
+    <div class="row justify-content-center my-5">
+        <div class="col-md-3 mx-2 mb-3">
+            <img src="{{ url_for('static', filename='imgz/exotico1.png') }}" alt="Imagen 1" class="img-fluid w-100">
+        </div> 
+        <div class="col-md-3 mx-2 mb-3">
+            <img src="{{ url_for('static', filename='imgz/maravilla1.png') }}" alt="Imagen 2" class="img-fluid w-100">
+        </div>
+        <div class="col-md-3 mx-2 mb-3">
+            <img src="{{ url_for('static', filename='imgz/vehiculo1.png') }}" alt="Imagen 3" class="img-fluid w-100">
+        </div>
     </div>
-
+    
+    <p class="my-4 px-3">Espero que les guste la pagina web, y que la disfruten tanto como yo disfruto jugar basquetbol</p>
+    
+    <div class="my-4">
+        <img src="{{ url_for('static', filename='imgz/lebron2.png') }}" alt="Segunda imagen del King" class="img-fluid w-25">
+    </div>
 </div>
-        <p>Espero que les guste la pagina web, y que la disfruten tanto como yo disfruto jugar basquetbol</p>
-            <img src="{{ url_for('static', filename='imgz/lebron2.png') }}" alt="Segunda imagen del King" class="img-fluid w-25">
-    </div>
-
-    <footer class="bg-dark text-center py-3 fixed-bottom">
-        <span class="rainbow-text">&copy; GCCA - 5D - Programación - CETis 61</span>
-    </footer>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<style>
-.rainbow-text {
-    background: linear-gradient(90deg, blue, green, red, yellow, turquoise);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-}
-
-</style>
-</html>
+{% endblock %}

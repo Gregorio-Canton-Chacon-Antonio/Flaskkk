@@ -1,74 +1,44 @@
-<!DOCTYPE html>
-<html lang="es-mx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehikkkulos Antiguos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <header class="bg-dark text-danger text-center py-4 mb-4">
-        <h1>Vehiculos Antiguos</h1>
-        <nav>
-            <ul class="nav justify-content-center mt-3">
-                <li class="nav-item">
-                    <a class="nav-link text-primary" href="{{ url_for('index') }}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-success" href="{{ url_for('animales') }}">Animales Exoticos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-danger" href="{{ url_for('vehiculos') }}">Vehiculos antiguos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="{{ url_for('maravillas') }}">Las maravillas del mundo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="{{ url_for('acercade') }}">Acerca de...</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}Vehículos Antiguos{% endblock %}
 
+{% block content %}
 <div class="container text-center mb-5">
-        <p>Aún quedan románticos que gustan de pocas asistencias, direcciones duras y suavidad cuestionable.
-        Todavía hay quienes prefieren arreglar con un par de herramientas, que someter el auto a un scanner.
-        Sin duda que hay quienes no se resignan a dejar de lidiar con el carburador y los frenos de tambor, la falta de ABS o la nula presencia de airbags.
-        Los autos antiguos, pese a las legislaciones de seguridad y ambientales, se niegan a desaparecer, puesto que los fanáticos de las tuercas los siguen prefiriendo por múltiples razones.</p>
-            <h5>Algunos vehiculos de algunas marcas reconocidos o con historia interesante de fondo son:</h5>
-                <h2>Seat: clave en la motorización de España</h4>
-                    <p>Fundada en 1950, sus primeros modelos como el Seat 600, hicieron accesible el automóvil a la clase trabajadora. Con el tiempo, evolucionó hasta convertirse en una marca global con modelos de éxito como el Seat Ibiza y el Seat León</p>
-                        <img src="{{ url_for('static', filename='imgz/vehiculo2.png') }}" alt="Seat" class="img-fluid w-25">
-                <h2>Pegaso: innovación y deportividad</h2>
-                    <p>Sus deportivos de los años 50, como el Z-102, son considerados joyas automovilísticas. Pegaso también llegó a fabricar camiones y vehículos militares, destacándose por su ingeniería avanzada.</p>
-                        <img src="{{ url_for('static', filename='imgz/vehiculo3.png') }}" alt="Pegaso" class="img-fluid w-25">
-                <h2>Hispano-Suiza: lujo y prestigio</h2>
-                    <p>Marca de lujo con sede en Guadalajara que fabricó modelos impresionantes a principios del siglo XX. Era famosa por sus automóviles elegantes y motores potentes, compitiendo con marcas como Rolls-Royce y Bugatti, dejando un legado imborrable en la historia automovilística.</p>
-                        <img src="{{ url_for('static', filename='imgz/vehiculo4.png') }}" alt="Hispano Suiza" class="img-fluid w-25">
-                <h2>Ford Mustang: el nacimiento del muscle car</h2>
-                    <p>El Ford Mustang, lanzado en 1964, revolucionó el mercado con su diseño accesible y deportivo. Su legado continúa con modelos modernos que siguen capturando la esencia del original.</p>
-                        <img src="{{ url_for('static', filename='imgz/vehiculo5.png') }}" alt="Ford Mustang" class="img-fluid w-25">
-                <h2>Chevrolet Bel Air: elegancia de los años 50</h2>
-                    <p>El Chevrolet Bel Air de 1957 es uno de los coches más representativos de la década. Su diseño con líneas cromadas, motor potente y confort lo hicieron un símbolo del sueño americano.</p>
-                        <img src="{{ url_for('static', filename='imgz/vehiculo6.png') }}" alt="Chevrolet Bel Air" class="img-fluid w-25">
+    <p class="my-4 px-3">Aún quedan románticos que gustan de pocas asistencias, direcciones duras y suavidad cuestionable.
+    Todavía hay quienes prefieren arreglar con un par de herramientas, que someter el auto a un scanner.
+    Sin duda que hay quienes no se resignan a dejar de lidiar con el carburador y los frenos de tambor, la falta de ABS o la nula presencia de airbags.
+    Los autos antiguos, pese a las legislaciones de seguridad y ambientales, se niegan a desaparecer, puesto que los fanáticos de las tuercas los siguen prefiriendo por múltiples razones.</p>
+    
+    <h5 class="mt-5 mb-4">Algunos vehiculos de algunas marcas reconocidos o con historia interesante de fondo son:</h5>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Seat: clave en la motorización de España</h2>
+        <p class="mb-4 px-3">Fundada en 1950, sus primeros modelos como el Seat 600, hicieron accesible el automóvil a la clase trabajadora. Con el tiempo, evolucionó hasta convertirse en una marca global con modelos de éxito como el Seat Ibiza y el Seat León</p>
+        <img src="{{ url_for('static', filename='imgz/vehiculo2.png') }}" alt="Seat" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Pegaso: innovación y deportividad</h2>
+        <p class="mb-4 px-3">Sus deportivos de los años 50, como el Z-102, son considerados joyas automovilísticas. Pegaso también llegó a fabricar camiones y vehículos militares, destacándose por su ingeniería avanzada.</p>
+        <img src="{{ url_for('static', filename='imgz/vehiculo3.png') }}" alt="Pegaso" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Hispano-Suiza: lujo y prestigio</h2>
+        <p class="mb-4 px-3">Marca de lujo con sede en Guadalajara que fabricó modelos impresionantes a principios del siglo XX. Era famosa por sus automóviles elegantes y motores potentes, compitiendo con marcas como Rolls-Royce y Bugatti, dejando un legado imborrable en la historia automovilística.</p>
+        <img src="{{ url_for('static', filename='imgz/vehiculo4.png') }}" alt="Hispano Suiza" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Ford Mustang: el nacimiento del muscle car</h2>
+        <p class="mb-4 px-3">El Ford Mustang, lanzado en 1964, revolucionó el mercado con su diseño accesible y deportivo. Su legado continúa con modelos modernos que siguen capturando la esencia del original.</p>
+        <img src="{{ url_for('static', filename='imgz/vehiculo5.png') }}" alt="Ford Mustang" class="img-fluid w-25">
+    </div>
+    
+    <div class="my-5">
+        <h2 class="mb-3">Chevrolet Bel Air: elegancia de los años 50</h2>
+        <p class="mb-4 px-3">El Chevrolet Bel Air de 1957 es uno de los coches más representativos de la década. Su diseño con líneas cromadas, motor potente y confort lo hicieron un símbolo del sueño americano.</p>
+        <img src="{{ url_for('static', filename='imgz/vehiculo6.png') }}" alt="Chevrolet Bel Air" class="img-fluid w-25">
+    </div>
 </div>
-
-    <footer class="bg-dark text-center py-3 fixed-bottom">
-        <span class="rainbow-text">&copy; GCCA - 5D - Programación - CETis 61</span>
-    </footer>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<style>
-.rainbow-text {
-    background: linear-gradient(90deg, blue, green, red, yellow, turquoise);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-}
-
-</style>
-</html>
+{% endblock %}

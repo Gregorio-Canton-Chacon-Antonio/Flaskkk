@@ -1,2 +1,5 @@
-# pLANTILLAS
-Aprender plantillas con Flask
+# FLASKKK
+Aprender plantillas con Flask, Formularios o Flask en General
+HTML y Python igual
+
+Gregorio Canton Chacon Antonio - 5D - CETis 61

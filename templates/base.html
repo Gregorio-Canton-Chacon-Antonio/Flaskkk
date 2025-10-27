@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Formularios Flask{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='stylez.css') }}" rel="stylesheet">
 </head>
 <body>
     <header class="bg-dark text-primary text-center py-4 mb-4">
-        <h1>Desarrollo de Plantilla Base</h1>
+        <img src="https://images.cooltext.com/5743560.gif" width="613" height="78" alt="Desarrollo de Plantilla Base" class="img-fluid" />
         <nav>
             <ul class="nav justify-content-center mt-3">
-                <li class="nav-item">
-                    <a class="nav-link text-info-emphasis" href="{{ url_for('inicio') }}">Inicio de Sesion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning-emphasis" href="{{ url_for('formulario') }}">Formulario</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link text-primary" href="{{ url_for('index') }}">Inicio</a>
                 </li>
@@ -52,7 +47,7 @@
     {% block content %}{% endblock %}
 
     <footer class="bg-dark text-center py-3 mt-5">
-        <span class="text-warning-emphasis">&copy; GCCA - 5D - Programación - CETis 61</span>
+        <span class="text-white">&copy; GCCA - 5D - Programación - CETis 61</span>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

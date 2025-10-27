@@ -4,17 +4,33 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'una_clave_secreta_yeaaa'
 
-@app.route("/")
+@app.route("/inicio")
 def index():
     return render_template("index.html")
 
-@app.route("/inicio")
-def inicio():
-    return render_template("iniciodesesion.html")
+@app.route("/iniciodesesion", methods=['GET', 'POST'])
+def iniciodesesion():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        
+        if email in usuarios and usuarios[email] == password:
+            flash('¡Inicio de sesión exitoso!')
+            return redirect(url_for('index'))
+        else:
+            flash('Email o contraseña incorrectos')
+    
+    return render_template('iniciodesesion.html')
 
 emails_registrados = ["admin@test.com", "usuario@gmail.com"]
 
-@app.route("/formulario", methods=["GET", "POST"])
+usuarios = {
+    'admin@test.com': 'admin123',
+    'user@test.com': 'user123',
+    'gregorio@cetis61.com': 'mi_password'
+}
+
+@app.route("/", methods=["GET", "POST"])
 def formulario():
     if request.method == "POST":
         nombre = request.form.get("nombre")
@@ -32,6 +48,7 @@ def formulario():
             return render_template("formulario.html")
         
         emails_registrados.append(email)
+        usuarios[email] = contraseña
         flash(f"Registro exitoso para {nombre} {apellidos}!")
         return redirect(url_for('index'))
     

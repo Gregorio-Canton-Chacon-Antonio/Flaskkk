@@ -1,0 +1,65 @@
+/* Backgrounds por página */
+.bg-inicio {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondoazul.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-animales {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondoverde.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-vehiculos {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondorojo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-maravillas {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondoamarillo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-acercade {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondoturquesa.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-inicio::before,
+.bg-animales::before,
+.bg-vehiculos::before,
+.bg-maravillas::before,
+.bg-acercade::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}

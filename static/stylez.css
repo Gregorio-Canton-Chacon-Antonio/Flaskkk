@@ -1,4 +1,23 @@
-/* Backgrounds por página */
+.bg-formulario {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondoturquesa.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-iniciodesesion {
+    background-color: #000000;
+    background-image: url('backkkgroundz/fondoamarillo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
 .bg-inicio {
     background-color: #000000;
     background-image: url('backkkgroundz/fondoazul.png');

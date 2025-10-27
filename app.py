@@ -2,6 +2,16 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
 
+#Usuarios predefinidos
+USUARIOS_REGISTRADOS = {
+    'agregorio.chacon@gmail.com' : {
+        'contaseña': 'aGcC.6162008',
+        'nombre': 'Antonio',
+        'apellidos': 'Gregorio Canton Chacon'
+        'fechAdeNac' : '25/01/2008'
+    }
+}
+
 app.config['SECRET_KEY'] = 'una_clave_secreta_yeaaa'
 
 @app.route("/inicio")
@@ -10,6 +20,15 @@ def index():
 
 @app.route("/iniciodesesion", methods=['GET', 'POST'])
 def iniciodesesion():
+    
+    
+    if session.get('logueado') == True:
+        session.clear()
+        return render_template('index.html')
+    
+    return render_template('iniciodesesion.html')
+    
+    
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
